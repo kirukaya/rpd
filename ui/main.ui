@@ -1,0 +1,3111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>РПД Менеджер[*]</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/logo.png</normaloff>../icons/logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Основное</string>
+     </attribute>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>761</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout11">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelTitle">
+         <property name="text">
+          <string>Наименование дисциплины:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout11">
+         <item>
+          <widget class="QLineEdit" name="lineTitle"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="importButton">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Открыть интерфейс выбора учебного плана для импорта</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Импортировать данные из учебного плана</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/import_button.png</normaloff>../icons/import_button.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelFaculty">
+         <property name="text">
+          <string>Факультет</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelDepartment">
+         <property name="text">
+          <string>Кафедра (департамент):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelDoT">
+         <property name="text">
+          <string>Направление подготовки:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineDoT"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelCompiler">
+         <property name="text">
+          <string>Составитель(-и):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelReviewer">
+         <property name="text">
+          <string>Рецензент(-ы):</string>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="labelPlace">
+         <property name="minimumSize">
+          <size>
+           <width>166</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>166</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Место дисциплины в струкуре образовательной программы:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="_emptylabel_">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>8</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="labelHours">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>166</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>166</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Объем дисциплины (модуля) в зачетных единицах и в академических
+часах с выделением объема аудиторной (лекции, семинары) и самостоятельной работы обучающихся</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QTableWidget" name="tableHours">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>9000</width>
+           <height>800</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>41</number>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Вид учебной работы
+по дисциплине</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Всего
+(в з/е и часах)</string>
+          </property>
+          <property name="font">
+           <font>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 1
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 2
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 3
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 4
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 5
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 6
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 7
+(в часах)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Семестр 8
+(в часах)</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>Общая трудоемкость
+дисциплины</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>Контактная работа -
+Аудиторные занятия</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>Лекции</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="2" column="1">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>Семинары, практические
+занятия</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="3" column="1">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item row="4" column="0">
+          <property name="text">
+           <string>Самостоятельная работа</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="5" column="0">
+          <property name="text">
+           <string>Вид текущего контроля</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item row="6" column="0">
+          <property name="text">
+           <string>Вид промежуточной аттестации</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="_emptylabel2_">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>8</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBoxFaculty">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxDepartment">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="comboBoxCompiler">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="comboBoxReviewer">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout12">
+         <item>
+          <widget class="QTextEdit" name="textEditPlace">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>тест</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="refreshPlaceButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>82</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/reload.png</normaloff>../icons/reload.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Перечень компетенций</string>
+     </attribute>
+     <widget class="QWidget" name="formLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>853</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout21">
+       <item row="0" column="0" colspan="2">
+        <widget class="QTableWidget" name="tableCompetencies">
+         <property name="minimumSize">
+          <size>
+           <width>600</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>774</width>
+           <height>500000</height>
+          </size>
+         </property>
+         <row>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>9</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>10</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>11</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>12</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>13</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>14</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>15</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Код
+компетенции</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Наименование
+компетенции</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Индикаторы
+достижения компетенции</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Результаты обучения (умения и
+знания), соотнесенные с инди-
+каторами достижения компетенции</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item row="0" column="3">
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTextEdit" name="textEditComp">
+         <property name="minimumSize">
+          <size>
+           <width>724</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>724</width>
+           <height>200</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout21">
+         <item>
+          <widget class="QToolButton" name="generateButtonComp">
+           <property name="toolTip">
+            <string>Сгенерировать AI</string>
+           </property>
+           <property name="text">
+            <string>Generate</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/button_ai.png</normaloff>../icons/button_ai.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="revertButtonComp">
+           <property name="toolTip">
+            <string>Отменить AI / Очистить</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>-1</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Revert</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/button_revert.png</normaloff>../icons/button_revert.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="submitButtonComp">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Сохранить в ячейку</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Submit</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/button_submit.png</normaloff>../icons/button_submit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Учебно-тематический план</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>-2</y>
+        <width>780</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_31">
+       <attribute name="title">
+        <string>Распределение тем</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>771</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout31">
+         <item>
+          <widget class="QTextEdit" name="textEditThemes"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="generateButtonThemes">
+        <property name="geometry">
+         <rect>
+          <x>478</x>
+          <y>476</y>
+          <width>170</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сгенерировать темы</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_ai.png</normaloff>../icons/button_ai.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="submitButtonThemes">
+        <property name="geometry">
+         <rect>
+          <x>651</x>
+          <y>476</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Экспортировать в таблицу Содержание дисциплины</string>
+        </property>
+        <property name="text">
+         <string>Подтвердить</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_ok.png</normaloff>../icons/button_ok.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="revertButtonThemes">
+        <property name="geometry">
+         <rect>
+          <x>235</x>
+          <y>476</y>
+          <width>240</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Отменить генерацию / Очистить</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_revert.png</normaloff>../icons/button_revert.png</iconset>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_32">
+       <attribute name="title">
+        <string>Содержание дисциплины</string>
+       </attribute>
+       <widget class="QWidget" name="formLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>837</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout31">
+         <property name="verticalSpacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QTextEdit" name="textEditThemes2">
+           <property name="minimumSize">
+            <size>
+             <width>724</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>800</width>
+             <height>200</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout32">
+           <item>
+            <widget class="QToolButton" name="generateButtonThemes2">
+             <property name="toolTip">
+              <string>Сгенерировать AI</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../icons/button_ai.png</normaloff>../icons/button_ai.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="revertButtonThemes2">
+             <property name="toolTip">
+              <string>Отменить AI / Очистить</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../icons/button_revert.png</normaloff>../icons/button_revert.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="submitButtonThemes2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>128</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Сохранить в ячейку</string>
+             </property>
+             <property name="text">
+              <string>Further</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../icons/button_submit.png</normaloff>../icons/button_submit.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QTableWidget" name="tableThemes">
+           <property name="minimumSize">
+            <size>
+             <width>774</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>774</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>11</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>12</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>13</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>14</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>15</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>17</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>18</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>19</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>20</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>21</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>22</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>23</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>24</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>25</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>26</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>27</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>28</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>29</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>30</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Наименование тем
+(разделов) дисциплины</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Описание темы</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Перечень вопросов для обсуждения
+на семинарских, практических занятиях,
+рекомендуемые источники из разделов 8,9
+(указывается раздел и порядковый
+номер источника)</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Формы проведения
+занятий</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Перечень вопросов,
+отводимых на самостоятельное
+освоение</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Формы внеаудиторной
+самостоятельной
+работы</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_33">
+       <attribute name="title">
+        <string>Распределение часов по темам</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>771</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout33">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableThemesHours">
+           <property name="maximumSize">
+            <size>
+             <width>772</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>11</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>12</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>13</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>14</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>15</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>17</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>18</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>19</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>20</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>21</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>22</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>23</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>24</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>25</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>26</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>27</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>28</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>29</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>30</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableThemesHoursFooter">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>62</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>772</width>
+             <height>62</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">margin-top: -1</string>
+           </property>
+           <row>
+            <property name="text">
+             <string>98</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>99</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="generateButtonThemesHours">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>483</y>
+          <width>151</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Совет ассистента</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_ai.png</normaloff>../icons/button_ai.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="refillButton">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>483</y>
+          <width>191</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Заполнить равномерно</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_up.png</normaloff>../icons/button_up.png</iconset>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_34">
+       <attribute name="title">
+        <string>Определение пробельных тем</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>751</width>
+          <height>451</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout34">
+         <item>
+          <widget class="QTableWidget" name="tableTests">
+           <property name="rowCount">
+            <number>40</number>
+           </property>
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <column>
+            <property name="text">
+             <string>Фамилия</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Имя</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Логин</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Адрес
+электронной
+почты</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Состояние</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Тест начат</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Завершено</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Затраченное
+время</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Общая оценка</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В1</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В2</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В3</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В4</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>В5</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="importTestsButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>3</y>
+          <width>241</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Импортировать результаты тестов</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/import_button.png</normaloff>../icons/import_button.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="analyzeTestsButton">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>483</y>
+          <width>261</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Определить пробельные темы</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_ai.png</normaloff>../icons/button_ai.png</iconset>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Учебно-методическое обеспечение</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>-2</y>
+        <width>780</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_41">
+       <attribute name="title">
+        <string>Контрольные работы</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>4</y>
+          <width>751</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout41">
+         <item>
+          <widget class="QLabel" name="labelTek">
+           <property name="text">
+            <string>Перечень вопросов, заданий, тем для подготовки к текущему контролю:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="textEditTek">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>800</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_42">
+       <attribute name="title">
+        <string>Достижение компетенций</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>70</y>
+          <width>771</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout42">
+         <item>
+          <widget class="QTableWidget" name="tableDost">
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>11</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>12</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>13</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>14</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>15</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Код компетенции</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Типовые
+контрольные
+задания</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>751</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Перечень компетенций с указанием индикаторов их достижения в процессе освоения образовательной программы содержится во вкладке 2. «Перечень компетенций»</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_43">
+       <attribute name="title">
+        <string>Экзамен</string>
+       </attribute>
+       <widget class="QWidget" name="formLayoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>816</width>
+          <height>600</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout41">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelVoprEkz">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Примерные вопросы для подготовки к экзамену:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelZadEkz">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Пример заданий экзаменационного билета:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTextEdit" name="textVoprEkz">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>600</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>600</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTextEdit" name="textZadEkz">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>600</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>600</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_44">
+       <attribute name="title">
+        <string>Литература</string>
+       </attribute>
+       <widget class="QWidget" name="formLayoutWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout42">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelLiterature">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Перечень основной и дополнительной учебной литературы, необходимой для освоения дисциплины:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTextEdit" name="textEditLiterature">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>600</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelResources">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Перечень ресурсов информационно-телекоммуникационной сети
+«Интернет», необходимых для освоения дисциплины:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTextEdit" name="textEditResources">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>600</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_45">
+       <attribute name="title">
+        <string>Прочее</string>
+       </attribute>
+       <widget class="QWidget" name="formLayoutWidget_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>1397</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout43">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelMet">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Методические указания для обучающихся по освоению дисциплины:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTextEdit" name="textEditMet">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>518</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>518</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelLic">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Комплект лицензионного программного обеспечения:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelSovBD">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Современные профессиональные базы данных и информационные справочные системы:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelSert">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Сертифицированные программные и аппаратные средства защиты информации:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="labelMathTech">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Описание материально-технической базы, необходимой для осуществления образовательного процесса по дисциплине:</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTextEdit" name="textEditLic">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>518</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>518</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QTextEdit" name="textEditSovBD">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>518</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>518</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QTextEdit" name="textEditSert">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>518</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>518</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QTextEdit" name="textEditMathTech">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>518</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>518</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Экспорт</string>
+     </attribute>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>150</y>
+        <width>551</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>549</width>
+         <height>189</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="formLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>504</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout51">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelFormat">
+           <property name="text">
+            <string>Формат файла:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="comboBoxFormat">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>.docx</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>.pdf</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelFormating">
+           <property name="text">
+            <string>Форматирование:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QRadioButton" name="radioButtonFull">
+           <property name="text">
+            <string>Полное (в стиле РПД fa.ru)</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QRadioButton" name="radioButtonSimple">
+           <property name="text">
+            <string>Частичное (простое форматирование)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelFilePath">
+           <property name="text">
+            <string>Путь к файлу:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout51">
+           <item>
+            <widget class="QLineEdit" name="lineFilePath">
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="filePathButton">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Выбрать</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../icons/open-file.png</normaloff>../icons/open-file.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="exportButton">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>150</y>
+          <width>141</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Экспортировать</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/button_further.png</normaloff>../icons/button_further.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>БРС</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>761</width>
+        <height>534</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout61">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTableWidget" name="tableBrs1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>480</height>
+          </size>
+         </property>
+         <row>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>9</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>10</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>11</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>12</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>13</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>14</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>15</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>16</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>17</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>18</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>19</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>20</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>21</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>22</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>23</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>24</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>25</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>26</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>28</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>29</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>30</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>№ п/п</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>​Вид отчетности</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Баллы</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Максимальные
+баллы</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout61">
+         <item>
+          <widget class="QLabel" name="labelFilePath2">
+           <property name="text">
+            <string>Путь к файлу БРС:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>6</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineFilePath2"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>6</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="filePathButton2">
+           <property name="text">
+            <string>Выбрать</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/open-file.png</normaloff>../icons/open-file.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exportButton2">
+           <property name="text">
+            <string>Экспортировать</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../icons/button_further.png</normaloff>../icons/button_further.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionSelectAll"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <widget class="QMenu" name="menuToolbars">
+     <property name="title">
+      <string>Панели инструментов</string>
+     </property>
+     <addaction name="actionEditCb"/>
+     <addaction name="actionFileCb"/>
+    </widget>
+    <addaction name="actionTab0"/>
+    <addaction name="actionTab1"/>
+    <addaction name="actionTab2"/>
+    <addaction name="actionTab3"/>
+    <addaction name="actionTab4"/>
+    <addaction name="actionTab5"/>
+    <addaction name="separator"/>
+    <addaction name="menuToolbars"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuOptions"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/open-file.png</normaloff>../icons/open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/save.png</normaloff>../icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/save-as.png</normaloff>../icons/save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выйти</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/new-file.png</normaloff>../icons/new-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новый</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Параметры</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/undo.png</normaloff>../icons/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Назад</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/redo.png</normaloff>../icons/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вперед</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/cut.png</normaloff>../icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вырезать</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/copy.png</normaloff>../icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Скопировать</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/paste.png</normaloff>../icons/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вставить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="actionSelectAll">
+   <property name="text">
+    <string>Выбрать всё</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionTab0">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Основное</string>
+   </property>
+  </action>
+  <action name="actionTab1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Перечень компетенций</string>
+   </property>
+  </action>
+  <action name="actionTab3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Учебно-методическое обеспечение</string>
+   </property>
+  </action>
+  <action name="actionEditCb">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Правка</string>
+   </property>
+  </action>
+  <action name="actionFileCb">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Файл</string>
+   </property>
+  </action>
+  <action name="actionTab4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Экспорт</string>
+   </property>
+  </action>
+  <action name="actionTab20">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Разбиение на темы</string>
+   </property>
+  </action>
+  <action name="actionTab21">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Содержание дисциплины</string>
+   </property>
+  </action>
+  <action name="actionTab22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Распределение часов по темам</string>
+   </property>
+  </action>
+  <action name="actionTab23">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Определение пробельных тем</string>
+   </property>
+  </action>
+  <action name="actionTab2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Учебно-тематический план</string>
+   </property>
+  </action>
+  <action name="actionTab5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>БРС</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
